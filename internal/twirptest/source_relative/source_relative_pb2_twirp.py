@@ -39,12 +39,15 @@ class TwirpException(httplib.HTTPException):
         return cls(code, msg, meta)
 
 class SvcClient(object):
-    def __init__(self, server_address):
+    def __init__(self, server_address, request_decorator=None):
         """Creates a new client for the Svc service.
 
         Args:
             server_address: The address of the server to send requests to, in
                 the full protocol://host:port form.
+            request_decorator: A function to modify the http request being
+		         sent. Takes in a urllib.request.Request object and returns the
+		         same request object
         """
         if sys.version_info[0] > 2:
             self.__target = server_address
@@ -52,12 +55,18 @@ class SvcClient(object):
             self.__target = server_address.encode('ascii')
         self.__service_name = "twirp.internal.twirptest.source_relative.Svc"
 
+        self.__request_decorator = request_decorator
+
     def __make_request(self, body, full_method):
         req = Request(
             url=self.__target + "/twirp" + full_method,
             data=body,
             headers={"Content-Type": "application/protobuf"},
         )
+
+        if self.__request_decorator:
+            req = self.__request_decorator(req)
+
         try:
             resp = urlopen(req)
         except HTTPError as err:
