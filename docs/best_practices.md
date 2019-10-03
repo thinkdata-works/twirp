@@ -98,7 +98,7 @@ lock versions for all team members.
 
 ```sh
 $ retool add github.com/golang/protobuf/protoc-gen-go master
-$ retool add github.com/twitchtv/twirp/protoc-gen-twirp master
+$ retool add github.com/thinkdata-works/twirp/protoc-gen-twirp master
 ```
 
 Using a Makefile is a good way to simplify code generation:

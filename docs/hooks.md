@@ -23,7 +23,7 @@ context.Context (possibly including a new value through the
 function).
 
 Check out
-[the godoc for `ServerHooks`](http://godoc.org/github.com/twitchtv/twirp#ServerHooks)
+[the godoc for `ServerHooks`](http://godoc.org/github.com/thinkdata-works/twirp#ServerHooks)
 for information on the specific callbacks. For an example hooks implementation,
-[`github.com/twitchtv/twirp/hooks/statsd`](https://github.com/twitchtv/twirp/blob/master/hooks/statsd/)
+[`github.com/thinkdata-works/twirp/hooks/statsd`](https://github.com/thinkdata-works/twirp/blob/master/hooks/statsd/)
 is a good tutorial.

@@ -19,8 +19,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/twitchtv/twirp"
-	"github.com/twitchtv/twirp/example"
+	"github.com/thinkdata-works/twirp"
+	"github.com/thinkdata-works/twirp/example"
 )
 
 func main() {

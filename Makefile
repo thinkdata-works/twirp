@@ -34,8 +34,8 @@ setup:
 release_gen:
 	git clean -xdf
 	docker run \
-		--volume "$(CURDIR):/go/src/github.com/twitchtv/twirp" \
-		--workdir "/go/src/github.com/twitchtv/twirp" \
+		--volume "$(CURDIR):/go/src/github.com/thinkdata-works/twirp" \
+		--workdir "/go/src/github.com/thinkdata-works/twirp" \
 		$(DOCKER_RELEASE_IMAGE) \
 		internal/release_gen.sh
 
