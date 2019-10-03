@@ -23,8 +23,8 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/twitchtv/twirp"
-	"github.com/twitchtv/twirp/clientcompat/internal/clientcompat"
+	"github.com/thinkdata-works/twirp"
+	"github.com/thinkdata-works/twirp/clientcompat/internal/clientcompat"
 )
 
 var (

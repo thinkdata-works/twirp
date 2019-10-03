@@ -3,7 +3,7 @@
 
 /*
 Package gogo_compat is a generated twirp stub package.
-This code was generated with github.com/twitchtv/twirp/protoc-gen-twirp v5.8.0.
+This code was generated with github.com/thinkdata-works/twirp/protoc-gen-twirp v5.8.0.
 
 Test to make sure that Twirp plays well with code generated with
 github.com/gogo/protobuf/protoc-gen-gofast.
@@ -24,8 +24,8 @@ import strconv "strconv"
 
 import jsonpb "github.com/golang/protobuf/jsonpb"
 import proto "github.com/golang/protobuf/proto"
-import twirp "github.com/twitchtv/twirp"
-import ctxsetters "github.com/twitchtv/twirp/ctxsetters"
+import twirp "github.com/thinkdata-works/twirp"
+import ctxsetters "github.com/thinkdata-works/twirp/ctxsetters"
 
 // Imports only used by utility functions:
 import io "io"
